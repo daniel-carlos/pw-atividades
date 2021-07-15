@@ -188,15 +188,14 @@ const validateLogin = (id, msgId) => {
 const validatePassword = (id, msgId) => {
     const element = document.getElementById(id);
     const value = element.value;
-    alert(value)
-    if (value.length < 4) {
-        showElement(msgId);
-        return false;
-    }
-
+    
     if (
-        value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])(?:([0-9a-zA-Z$*&@#])(?!\1)){8,}$/i)
-    ) {
+        value.length >= 4
+        && value.match(/[a-z]+/)
+        && value.match(/[A-Z]+/)
+        && value.match(/[0-9]/)
+        && value.match(/W+/)
+     ) {
         hideElement(msgId);
         return true;
     }
@@ -208,11 +207,12 @@ const validatePassword = (id, msgId) => {
 
 const validateAll = () => {
     //Nome 
-    if (
-        validateNome("nome", "msg-nome") &&
-        validateLogin("login", "msg-login") &&
-        validatePassword("senha", "msg-senha")
-    ) {
+    let pass = true;
+    if(!validateNome("nome", "msg-nome")) pass = false;
+    if(!validateLogin("login", "msg-login")) pass = false;
+    if(!validatePassword("senha", "msg-senha")) pass = false;
+
+    if (pass) {
         alert("Tudo OK");
     }
 }
