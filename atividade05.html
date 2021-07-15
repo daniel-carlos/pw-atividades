@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividades 05</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="text-light bg-dark">
+    <header>
+      <div class="container">
+        <h1>Atividades</h1>
+        <h5>
+          Daniel Carlos Souza de Oliveira - <span class="fw-bold">390595</span>
+        </h5>
+        <nav class="navbar sticky-top navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Atividades</a>
+            <a class="navbar-item" href="#">Atividade 04</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Trabalho de Fixação da Aula 05</h1>
+
+      <h2>Etapa I</h2>
+      <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne"
+            >
+              Questão 01
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-headingOne"
+          >
+            <div class="accordion-body text-dark">
+              <h4>
+                Crie um formulário HTML que possua um único campo do tipo texto
+                obrigatório que deve ser preenchido antes de submetido ao
+                servidor por meio de um botão do tipo submit
+              </h4>
+
+              <div class="text-dark resposta-container">
+                <h5>Resposta</h5>
+                <div class="resposta">
+                  <form>
+                    <div class="form-group">
+                      <label for="input-q1">Digite algo</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="input-q1"
+                        aria-describedby="algo legal"
+                        placeholder="Digite algo legal"
+                      />
+                    </div>
+                    <button type="submit" class="mt-2 btn btn-primary">
+                      Enviar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-heading2">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse2"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapse2"
+            >
+              Questão 02
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapse2"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-heading2"
+          >
+            <div class="accordion-body text-dark">
+              <h4>
+                Crie um formulário HTML que possua um único campo do tipo texto
+                obrigatório e implemente uma função JavaScriptque verifique se
+                este único campo do tipo texto obrigatório está preenchido com
+                algo
+              </h4>
+
+              <div class="text-dark resposta-container">
+                <h5>Resposta</h5>
+                <div class="resposta">
+                  <form
+                    class="prevent-default"
+                    onsubmit="validate1('input-q2', 'msg-01')"
+                  >
+                    <div class="form-group">
+                      <label for="input-q2">Digite algo</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="input-q2"
+                        aria-describedby="algo legal"
+                        placeholder="Digite algo legal"
+                      />
+                      <small id="msg-01" class="d-none text-danger"
+                        >Este campo é obrigatório</small
+                      >
+                    </div>
+                    <button type="submit" class="mt-2 btn btn-primary">
+                      Enviar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-heading3">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse3"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapse3"
+            >
+              Questão 03
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapse3"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-heading3"
+          >
+            <div class="accordion-body text-dark">
+              <h4>
+                Crie um formulário HTML que possua um único campo do tipo texto
+                obrigatório e implemente uma função JavaScript que verifique se
+                este único campo do tipo texto obrigatório está preenchido com
+                algo válido
+              </h4>
+
+              <div class="text-dark resposta-container">
+                <h5>Resposta</h5>
+                <div class="resposta">
+                  <form
+                    class="prevent-default"
+                    onsubmit="validate2('input-q3', 'msg-03')"
+                  >
+                    <div class="form-group">
+                      <label for="input-q3">Digite algo</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="input-q3"
+                        aria-describedby="algo legal"
+                        placeholder="Digite algo legal"
+                      />
+                      <small id="msg-03" class="d-none text-danger"
+                        >Este campo é obrigatório e aceita apenas letras e
+                        números</small
+                      >
+                    </div>
+                    <button type="submit" class="mt-2 btn btn-primary">
+                      Enviar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-heading4">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse4"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapse4"
+            >
+              Questão 04
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapse4"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-heading4"
+          >
+            <div class="accordion-body text-dark">
+              <h4>
+                Crie um formulário HTML que possua um único campo do tipo texto
+                obrigatório e implemente uma função JavaScriptque verifique se
+                este único campo do tipo texto obrigatório está preenchido com
+                algo válido, além de possuir no mínimo 1 caractere e no máximo
+                10 caracteres
+              </h4>
+
+              <div class="text-dark resposta-container">
+                <h5>Resposta</h5>
+                <div class="resposta">
+                  <form
+                    class="prevent-default"
+                    onsubmit="validate3('input-q4', 'msg-04')"
+                  >
+                    <div class="form-group">
+                      <label for="input-q4">Digite algo</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="input-q4"
+                        aria-describedby="algo legal"
+                        placeholder="Digite algo legal"
+                      />
+                      <small id="msg-04" class="d-none text-danger"
+                        >Este campo é obrigatório, aceita apenas letras e
+                        números e deve
+                        <span class="fw-bold"
+                          >conter 10 caracteres ou menos</span
+                        ></small
+                      >
+                    </div>
+                    <button type="submit" class="mt-2 btn btn-primary">
+                      Enviar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-heading5">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse5"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapse5"
+            >
+              Questão 05
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapse5"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-heading5"
+          >
+            <div class="accordion-body text-dark">
+              <h4>
+                Crie um formulário HTML que possua um único campo do tipo texto
+                obrigatório e implemente uma função JavaScriptque verifique se
+                este único campo do tipo texto obrigatório está preenchido com
+                um número inteiro positivo válido
+              </h4>
+
+              <div class="text-dark resposta-container">
+                <h5>Resposta</h5>
+                <div class="resposta">
+                  <form
+                    class="prevent-default"
+                    onsubmit="validateNumber('input-q5', 'msg-05')"
+                  >
+                    <div class="form-group">
+                      <label for="input-q4">Digite um número positivo</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="input-q5"
+                        aria-describedby="algo legal"
+                        placeholder="Digite um número"
+                      />
+                      <small id="msg-05" class="d-none text-danger"
+                        >O texto é claro quando diz
+                        <span class="fw-bold">NÚMERO POSITIVO</span></small
+                      >
+                    </div>
+                    <button type="submit" class="mt-2 btn btn-primary">
+                      Enviar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-heading6">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse6"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapse6"
+            >
+              Questão 06
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapse6"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-heading6"
+          >
+            <div class="accordion-body text-dark">
+              <h4>
+                Crie um formulário HTML que possua um único campo do tipo
+                combobox(HTML Select) obrigatório e implemente uma função
+                JavaScriptque verifique se este único campo do tipo
+                comboboxobrigatório está selecionando algo válido (onde algo
+                válido é algum opção que não é a primeira)
+              </h4>
+
+              <div class="text-dark resposta-container">
+                <h5>Resposta</h5>
+                <div class="resposta">
+                  <form
+                    class="prevent-default"
+                    onsubmit="validateOption('select-06', 'msg-06')"
+                  >
+                    <div class="form-group">
+                      <label for="input-q6">Escolha uma opção</label>
+                      <div>
+                        <select name="my-select" id="select-06">
+                          <option value="0" class="text-secondary">
+                            escolha uma opção
+                          </option>
+                          <option value="1">Mussarela</option>
+                          <option value="2">Calabresa</option>
+                          <option value="3">Frango</option>
+                          <option value="4">Portuguesa</option>
+                        </select>
+                      </div>
+                      <small id="msg-06" class="d-none text-danger">
+                        esta opção não é válida
+                      </small>
+                    </div>
+                    <button type="submit" class="mt-2 btn btn-primary">
+                      Enviar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-heading7">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse7"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapse7"
+            >
+              Questão 07
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapse7"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-heading7"
+          >
+            <div class="accordion-body text-dark">
+              <h4>
+                Crie um formulário HTML que possua um único campo do tipo
+                checkbox e implemente uma função JavaScriptque verifique se este
+                único campo do tipo checkbox está selecionado
+              </h4>
+
+              <div class="text-dark resposta-container">
+                <h5>Resposta</h5>
+                <div class="resposta">
+                  <form
+                    class="prevent-default"
+                    onsubmit="validateCheckbox('chkbx-07', 'msg-07')"
+                  >
+                    <div class="form-group">
+                      <input
+                        type="checkbox"
+                        id="chkbx-07"
+                        name="chkbx"
+                        checked
+                      />
+                      <label for="input-q7"
+                        >Calabresa é o melhor sabor de pizza 🍕</label
+                      >
+                      <div>
+                        <small id="msg-07" class="d-none text-danger">
+                          diga a verdade
+                        </small>
+                      </div>
+                    </div>
+                    <button type="submit" class="mt-2 btn btn-primary">
+                      Enviar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-heading8">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse8"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapse8"
+            >
+              Questão 08
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapse8"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-heading8"
+          >
+            <div class="accordion-body text-dark">
+              <h4>
+                Crie um formulário HTML que possua vários campos do tipo
+                checkbox e implemente uma função JavaScript que faça a contagem
+                de quantos campos do tipo checkbox estão selecionado
+              </h4>
+
+              <div class="text-dark resposta-container">
+                <h5>Resposta</h5>
+                <div class="resposta">
+                  <form
+                    class="prevent-default"
+                    onsubmit="countCheckboxes('chkbx-08', 'msg-08')"
+                  >
+                    <div class="form-group">
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="chkbx-08-1"
+                          class="chkbx-08"
+                          name="chkbx"
+                          checked
+                        />
+                        <label for="input-q8"
+                          >Teve contato com alguém diagnosticado com
+                          COVID-19</label
+                        >
+                      </div>
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="chkbx-08-2"
+                          class="chkbx-08"
+                          name="chkbx"
+                          checked
+                        />
+                        <label for="input-q8"
+                          >Apresenta algum sintoma de COVID-19</label
+                        >
+                      </div>
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="chkbx-08-3"
+                          class="chkbx-08"
+                          name="chkbx"
+                          checked
+                        />
+                        <label for="input-q8"
+                          >Testou positivo para COVID-19 nos últimos 3
+                          meses</label
+                        >
+                      </div>
+                      <div>
+                        <input
+                          type="checkbox"
+                          id="chkbx-08-3"
+                          class="chkbx-08"
+                          name="chkbx"
+                          checked
+                        />
+                        <label for="input-q8"
+                          >Possui comorbidade ou pertence a grupo de
+                          risco</label
+                        >
+                      </div>
+
+                      <div>
+                        <small id="msg-08" class="d-none text-danger">
+                          marque pelo menos uma opção
+                        </small>
+                      </div>
+                    </div>
+                    <button type="submit" class="mt-2 btn btn-primary">
+                      Enviar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-heading9">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapse9"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapse9"
+            >
+              Questão 09
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapse9"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-heading9"
+          >
+            <div class="accordion-body text-dark">
+              <h4>
+                Crie um formulário HTML que possua vários campos do tipo radio e
+                implemente uma função JavaScriptque verifique se pelo menos um
+                campo do tipo radio está selecionado
+              </h4>
+
+              <div class="text-dark resposta-container">
+                <h5>Resposta</h5>
+                <div class="resposta">
+                  <form
+                    class="prevent-default"
+                    onsubmit="validateCombobox('cbbx-09', 'msg-09')"
+                  >
+                    <div class="form-group">
+                      <div>
+                        <input
+                          type="radio"
+                          id="cbbx-09-1"
+                          class="cbbx-09"
+                          name="cbbx"
+                        />
+                        <label for="input-q9">0 a 10 anos</label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="cbbx-09-2"
+                          class="cbbx-09"
+                          name="cbbx"
+                        />
+                        <label for="input-q9">11 a 25 anos</label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="cbbx-09-3"
+                          class="cbbx-09"
+                          name="cbbx"
+                        />
+                        <label for="input-q9">25 a 50 anos</label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="cbbx-09-4"
+                          class="cbbx-09"
+                          name="cbbx"
+                        />
+                        <label for="input-q9">mais de 50 anos</label>
+                      </div>
+
+                      <div>
+                        <small id="msg-09" class="d-none text-danger">
+                          marque pelo menos uma opção
+                        </small>
+                      </div>
+                    </div>
+                    <button type="submit" class="mt-2 btn btn-primary">
+                      Enviar
+                    </button>
+                    <button
+                      type="button"
+                      onclick="limparCombobox('cbbx-09')"
+                      class="mt-2 btn btn-secondary"
+                    >
+                      Limpar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Etapa 2</h2>
+      <form onsubmit="validateAll()" class="prevent-default">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input
+            type="name"
+            class="form-control"
+            id="nome"
+            aria-describedby="emailHelp"
+            placeholder="Nome"
+          />
+          <small id="msg-nome" class="d-none text-danger">nome inválido</small>
+        </div>
+        <div class="form-group">
+          <label for="login">Login (email)</label>
+          <input
+            type="email"
+            class="form-control"
+            id="login"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+          <small id="msg-login" class="d-none text-danger"
+            >email inválido</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            id="senha"
+            placeholder="Password"
+          />
+          <small id="msg-senha" class="d-none text-danger"
+            >Senha inválida</small
+          >
+        </div>
+        <button type="submit" class="btn mt-3 btn-primary">Submit</button>
+      </form>
+    </main>
+
+    <footer></footer>
+
+    <script src="./control-t05.js"></script>
+  </body>
+</html>

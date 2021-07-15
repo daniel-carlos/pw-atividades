@@ -1,0 +1,14 @@
+.list-group-numbered > li::before {
+  font-weight: bold;
+  font-size: large;
+}
+
+
+.resposta-container{
+  background-color: rgb(236, 233, 248);
+  padding: 1em;
+}
+
+footer{
+  min-height: 3em;
+}
